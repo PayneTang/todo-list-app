@@ -40,11 +40,9 @@ export default {
     toggleTodo(todoId) {
       const target = this.todos.find((todo) => todo._id === todoId);
       const updated = { ...target };
-      axios
-        .patch(`http://localhost:5000/api/todo/${todoId}`, updated)
-        .catch((error) => {
-          console.log('Error', error);
-        });
+      axios.patch(`${API_URL}/todo/${todoId}`, updated).catch((error) => {
+        console.log('Error', error);
+      });
     },
   },
   created() {
