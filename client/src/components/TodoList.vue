@@ -25,7 +25,7 @@ export default {
   methods: {
     getAllTodos() {
       axios
-        .get('http://localhost:5000/api/todo')
+        .get(process.env.VUE_APP_API_URL + '/todo')
         .then((resp) => {
           this.todos = resp.data;
         })

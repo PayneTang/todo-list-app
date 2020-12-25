@@ -23,7 +23,7 @@ export default {
   methods: {
     createTodo() {
       axios
-        .post('http://localhost:5000/api/todo', {
+        .post(process.env.VUE_APP_API_URL + '/todo', {
           title: this.newTodoTitle,
           content: this.newTodoContent,
         })
