@@ -3,14 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/app.js",
-  "tsc": "tsc",
   "scripts": {
     "build": "tsc",
-    "start": "tsc && node .",
+    "start": "node dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsc -w & nodemon -q -w dist dist/app.js",
-    "format": "node_modules/prettier/bin-prettier.js  --config .prettierrc './src/*.ts' --write",
-    "postinstall": "npm run tsc"
+    "format": "node_modules/prettier/bin-prettier.js  --config .prettierrc './src/*.ts' --write"
   },
   "keywords": [],
   "author": "",
