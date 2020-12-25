@@ -11,6 +11,8 @@
 
 <script>
 import axios from 'axios';
+import getApiUrl from '../getApiUrl';
+let API_URL = getApiUrl();
 
 export default {
   data() {
@@ -23,7 +25,7 @@ export default {
   methods: {
     createTodo() {
       axios
-        .post(process.env.VUE_APP_API_URL + '/todo', {
+        .post(API_URL + '/todo', {
           title: this.newTodoTitle,
           content: this.newTodoContent,
         })

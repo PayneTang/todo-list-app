@@ -16,6 +16,9 @@
 
 <script>
 import axios from 'axios';
+import getApiUrl from '../getApiUrl';
+let API_URL = getApiUrl();
+
 export default {
   data() {
     return {
@@ -25,7 +28,7 @@ export default {
   methods: {
     getAllTodos() {
       axios
-        .get(process.env.VUE_APP_API_URL + '/todo')
+        .get(API_URL + '/todo')
         .then((resp) => {
           this.todos = resp.data;
         })
